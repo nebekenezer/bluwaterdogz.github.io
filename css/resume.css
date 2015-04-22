@@ -1,0 +1,297 @@
+main{
+    height:4000px;
+    font-family: helvetica;
+    position:relative;
+}
+body{
+    margin:0;
+}
+section *{
+    background-size: 150% 150%;
+
+}
+ul{
+    list-style: none;
+}
+
+.icons img{
+    width:30px;
+
+
+}
+ul:nth-child(2n+3){
+float:left;
+}
+#hexMenu{
+    width:310px;
+    position:fixed;
+    top:30px;
+    right:30px;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    transform-origin:50% 50%;
+}
+
+#hexMenu{
+
+    z-index: 15;
+}
+
+.hexagon svg{
+    position:relative;
+    width:80%;
+    top:-30px;
+    left:10%;
+}
+.hexagon a{
+    color:black;
+    text-decoration: none;
+
+}
+.hexagon:nth-child(4n+1){margin-left: 50px;}
+.hexagon:nth-child(4){left:100px;}
+
+/*CREATED USING CSS HEXAGON GENERATOR @ http://csshexagon.com/ */
+
+
+.hexagon {
+    position: relative;
+    width: 100px; 
+    height: 57.74px;
+    background-color: #ffffff;
+    margin: 15px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+    display:inline-block;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 70.71px;
+  height: 70.71px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 14.6447px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.hexagon:before {
+  top: -35.3553px;
+}
+
+.hexagon:after {
+  bottom: -35.3553px;
+}
+
+/*cover up extra shadows*/
+.hexagon span {
+  display: block;
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:100px;
+  height:57.7350px;
+  z-index: 2;
+  background: inherit;
+}
+
+.hexagon .topics {
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100px;
+    height:57.7350px;
+    z-index: 2;
+    background: inherit;
+}
+
+.hexagon:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+    z-index:1000;
+}
+
+.skillList li{
+    list-style-type: none;
+
+}
+
+table{
+    border-collapse: collapse;
+}
+td{
+    border:solid 2px black;
+}
+.skill{
+    width:30px;
+}
+.skillLvl{
+    width:100px;
+
+}
+
+#purpose{
+    background: black;
+    width:2500px;
+    height:530px;
+    position:absolute;
+    top:-10px;
+    left:-5px;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+
+
+}
+#purposeBg{
+    width:2500px;
+    height:550px;
+
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+
+    transform-origin: 0% 100%;
+
+    background: rgba(0,0,0,.6);
+    position:absolute;
+    top:-300px;
+    left:0px;
+    z-index:10;
+}
+
+#purposeBg:hover{
+
+    top:-450px;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+#purposeBg:hover > *{
+
+}
+
+#purpose h2{
+    z-index: 11;
+    color:white;
+    position:fixed;
+    bottom:0px;
+    left:20px;
+
+}
+
+.pictures, .overlay, .overlayR{
+
+    width:100%;
+    min-width: 1100px;
+    height:40vw;
+    min-height: 450px;
+    background-repeat: no-repeat ;
+}
+
+
+
+/*text formatting*/
+h2{
+    margin:0px;
+}
+
+
+#divider1{
+/* City Skyline Color*/
+    background-image: url("../imgs/cityb-wlow.jpg");
+    text-align: center;
+    position:relative;
+    height:100vh;
+    min-height: 450px;
+    background-repeat: no-repeat ;
+}
+#divider1 h1{
+    position:absolute;
+    top:50%;
+    left:50%;
+    font-size: 100px;
+}
+
+#divider2{
+/*Mountain*/
+    background-image: url("../imgs/mountainsbg.jpg");
+}
+#divider2overlay{
+    background-image: url("../imgs/mountainsoverlay.png");
+    position:absolute;
+
+}
+#divider2overlay2{
+    background-image: url("../imgs/mountainsoverlay2.png");
+    position:absolute;
+}
+
+
+#divider3{
+/*Wave*/
+        background-image: url("../imgs/stripesblack.png");
+        background-repeat: repeat;
+
+}
+#divider3overlay{
+        background-image: url("../imgs/waveoverlayflip.png");
+}
+#divider4{
+    /*birds*/
+    background-image: url("../imgs/countryroadopt.jpg");
+}
+#divider4overlay{
+    background-image: url("../imgs/birdsonwire.png");
+    position:absolute;
+}
+#divider5{
+/*blossoms*/
+    background-image: url("../imgs/stripesblack.png");
+    background-repeat: repeat;
+    /*background-size: 40% 40% ;*/
+}
+#divider5overlay{
+    background-image: url("../imgs/blossomoverlay.png");
+    position:absolute; 
+}
+
+.content{
+    height:25vw;
+    width:100%;
+    margin:0;
+    position:relative;
+    background-color: #fff;
+}
+
+#education{
+}
+#skills{
+}
+#language{
+}
+#work{
+}
+#about{
+}
