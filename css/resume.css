@@ -2,27 +2,62 @@ main{
     height:4000px;
     font-family: helvetica;
     position:relative;
+        margin:0 !important;
+    padding:0 !important;
 }
 body{
-    margin:0;
+    margin:0 !important;
+    padding:0 !important;
 }
-section *{
-    background-size: 150% 150%;
+
+/* classes */
+
+.education{
+
 
 }
-ul{
+.hearticons{
+    color:red;
+    font-size:30px;
+    float: right;
+    width:20%;
+
+}
+.left{
+    float: left;
+    width:70%;
+}
+.left:hover .hidden {
+    opacity:1;
+    height:auto;
+}
+.left:hover + .hidden {
+    opacity:1;
+    height:auto;
+}
+
+.hidden{
+    height:0px;
+    opacity:0;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+.info{
+    width:50%;
+    float: left;
+    margin:20px;
+    margin-bottom:20px;
+
+}
+
+.info ul{
     list-style: none;
 }
 
-.icons img{
-    width:30px;
-
-
-}
-ul:nth-child(2n+3){
-float:left;
-}
+/* Hex Menu*/
 #hexMenu{
+    display:none;
     width:310px;
     position:fixed;
     top:30px;
@@ -34,7 +69,6 @@ float:left;
 }
 
 #hexMenu{
-
     z-index: 15;
 }
 
@@ -44,13 +78,23 @@ float:left;
     top:-30px;
     left:10%;
 }
+#purpose svg{
+    width:10%;
+    position:relative;
+    top:365px;
+    left:50px;
+
+}
 .hexagon a{
     color:black;
     text-decoration: none;
-
 }
-.hexagon:nth-child(4n+1){margin-left: 50px;}
-.hexagon:nth-child(4){left:100px;}
+.hexagon:nth-child(4n+1){
+    margin-left: 50px;
+}
+.hexagon:nth-child(4){
+    left:100px;
+}
 
 /*CREATED USING CSS HEXAGON GENERATOR @ http://csshexagon.com/ */
 
@@ -129,77 +173,16 @@ float:left;
 
 table{
     border-collapse: collapse;
+    margin:40px;
+    text-align: center;
+    font-size:30px;
 }
 td{
     border:solid 2px black;
-}
-.skill{
-    width:30px;
-}
-.skillLvl{
-    width:100px;
-
+    padding:4px;
 }
 
-#purpose{
-    background: black;
-    width:2500px;
-    height:530px;
-    position:absolute;
-    top:-10px;
-    left:-5px;
-    -webkit-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
-    -webkit-transition-delay: .5s;
-    -o-transition-delay: .5s;
-    transition-delay: .5s;
 
-
-}
-#purposeBg{
-    width:2500px;
-    height:550px;
-
-    -webkit-transform: rotate(-20deg);
-    -ms-transform: rotate(-20deg);
-    -o-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-
-    -webkit-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
-
-    transform-origin: 0% 100%;
-
-    background: rgba(0,0,0,.6);
-    position:absolute;
-    top:-300px;
-    left:0px;
-    z-index:10;
-}
-
-#purposeBg:hover{
-
-    top:-450px;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-}
-
-#purposeBg:hover > *{
-
-}
-
-#purpose h2{
-    z-index: 11;
-    color:white;
-    position:fixed;
-    bottom:0px;
-    left:20px;
-
-}
 
 .pictures, .overlay, .overlayR{
 
@@ -213,10 +196,41 @@ td{
 
 
 /*text formatting*/
-h2{
-    margin:0px;
+
+h1 {
+
+    font-size: 14vh !important;
+    color:white;
+    width:150px;
+    text-align: left;
+    /*z-index:-1;*/
+    -webkit-text-stroke:2px grey;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-text-stroke:2px black;
+    margin:5px;
+    margin-top: 0px !important;
 }
 
+h1:hover{
+    color:black;
+    -webkit-text-stroke:2px white;
+
+}
+
+h2{
+    margin:10px;
+    font-size: 90px;
+    color:white;
+    -webkit-text-stroke:1px #909090;
+    text-align: center;
+    margin-top:15%;
+}
+
+.pictures h2{
+    text-align:center;
+}
 
 #divider1{
 /* City Skyline Color*/
@@ -227,12 +241,7 @@ h2{
     min-height: 450px;
     background-repeat: no-repeat ;
 }
-#divider1 h1{
-    position:absolute;
-    top:50%;
-    left:50%;
-    font-size: 100px;
-}
+
 
 #divider2{
 /*Mountain*/
@@ -257,6 +266,7 @@ h2{
 }
 #divider3overlay{
         background-image: url("../imgs/waveoverlayflip.png");
+
 }
 #divider4{
     /*birds*/
@@ -270,7 +280,7 @@ h2{
 /*blossoms*/
     background-image: url("../imgs/stripesblack.png");
     background-repeat: repeat;
-    /*background-size: 40% 40% ;*/
+
 }
 #divider5overlay{
     background-image: url("../imgs/blossomoverlay.png");
@@ -278,7 +288,7 @@ h2{
 }
 
 .content{
-    height:25vw;
+    height:40vw;
     width:100%;
     margin:0;
     position:relative;
@@ -294,4 +304,206 @@ h2{
 #work{
 }
 #about{
+}
+
+
+@media(max-width: 900px) and (min-width: 500px){
+
+    h1 {
+
+    font-size: 10vh !important;
+}
+
+
+section{
+    /*max-height:400px;*/
+}
+
+    #divider1{
+/* City Skyline Color*/
+    background-image: url("../imgs/cityb-wlow1000.jpg");
+    text-align: center;
+    position:relative;
+    height:500px;
+    background-repeat: no-repeat ;
+    
+}
+.content{
+    height:500px;
+}
+
+#divider2{
+/*Mountain*/
+    background-image: url("../imgs/mountainsbg1000.jpg");
+
+}
+#divider2overlay{
+    background-image: url("../imgs/mountainsoverlay1000.png");
+    background-position: 0 200px;
+
+}
+#divider2overlay2{
+    background-image: url("../imgs/mountainsoverlay21000.png");
+
+}
+
+
+#divider3{
+/*Wave*/
+        background-image: url("../imgs/stripesblack.png");
+        background-repeat: repeat;
+
+}
+#divider3overlay{
+        background-image: url("../imgs/waveoverlayflip1000.png");
+
+}
+#divider4{
+    /*birds*/
+    background-image: url("../imgs/countryroadopt1000.jpg");
+}
+#divider4overlay{
+    background-image: url("../imgs/birdsonwire1000.png");
+    position:absolute;
+}
+#divider5{
+/*blossoms*/
+    background-image: url("../imgs/stripesblack.png");
+    background-repeat: repeat;
+    /*background-size: 40% 40% ;*/
+}
+#divider5overlay{
+    background-image: url("../imgs/blossomoverlay1000.png");
+    position:absolute; 
+}
+}
+
+
+@media(max-width: 500px){
+
+h1 {
+
+    font-size: 7vh !important;
+}
+
+.content{
+    height:500px;
+}
+
+.pictures{
+    height:300px;
+
+}
+
+
+
+
+#divider1{
+/* City Skyline Color*/
+    background-image: url("../imgs/cityb-wlow500.jpg");
+    text-align: center;
+    position:relative;
+    height:500px;
+    background-repeat: no-repeat ;
+    background-position: 0px 100px;
+}
+#divider2{
+/*Mountain*/
+    background-image: url("../imgs/mountainsbg500.jpg");
+}
+#divider2overlay{
+    background-image: url("../imgs/mountainsoverlay500.png");
+
+
+}
+#divider2overlay2{
+    background-image: url("../imgs/mountainsoverlay2500.png");
+}
+
+#divider3{
+/*Wave*/
+    background-image: url("../imgs/stripesblack.png");
+    background-repeat: repeat;
+
+}
+#divider3overlay{
+        background-image: url("../imgs/waveoverlayflip500.png");
+}
+#divider4{
+    /*birds*/
+    background-image: url("../imgs/countryroadopt500.jpg");
+}
+#divider4overlay{
+    background-image: url("../imgs/birdsonwire500.png");
+    position:absolute;
+}
+#divider5{
+/*blossoms*/
+    background-image: url("../imgs/stripesblack.png");
+    background-repeat: repeat;
+}
+#divider5overlay{
+    background-image: url("../imgs/blossomoverlay500.png");
+    position:absolute; 
+}
+
+#hexMenu{
+    width:310px;
+    position:absolute;
+    top:300px;
+    right:10%;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    transform-origin:50% 50%;
+}
+
+#hexMenu{
+
+    z-index: 15;
+}
+#purpose svg{
+    top:300px;
+    left:3%;
+}
+
+#purpose{
+    background: black;
+    /*width:2500px;*/
+    height:530px;
+    position:absolute;
+    top:-10px;
+    left:-5px;
+    overflow: hidden;
+}
+#purposeBg{
+   /*width:2500px;*/
+    height:600px;
+
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+
+    transform-origin: 0% 100%;
+
+    background: rgba(0,0,0,.6);
+
+    position:absolute;
+    top:-270px;
+    left:0px;
+    z-index:10;
+
+    overflow: hidden;
+}
+#education{
+
+margin-top: 150px
+}
+
+table{
+
+    font-size:18px;
+}
+
 }
