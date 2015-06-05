@@ -4,48 +4,61 @@ main{
     position:relative;
         margin:0 !important;
     padding:0 !important;
+    width:100%;
 }
 body{
     margin:0 !important;
     padding:0 !important;
+    width:100%;
 }
 
 /* classes */
 
-.education{
-
-
+#education{
+    color:white;
+    background: #151510;
 }
 .hearticons{
     color:red;
     font-size:30px;
     float: right;
-    width:20%;
+    width:18%;
 
 }
 .left{
     float: left;
-    width:70%;
+    width:75%;
+    border: 2px solid #202020;
+    text-align: left;
+    background:#002000;
 }
-.left:hover .hidden {
-    opacity:1;
-    height:auto;
+.reveal{
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+
+}
+.left:hover > .hidden {
+
+    height:100px;
 }
 .left:hover + .hidden {
-    opacity:1;
     height:auto;
 }
 
 .hidden{
+    margin:0px;
     height:0px;
-    opacity:0;
+
+    overflow: hidden;
+
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
 }
 .info{
     width:50%;
-    float: left;
+    float: right;
     margin:20px;
     margin-bottom:20px;
 
@@ -106,9 +119,9 @@ body{
     background-color: #ffffff;
     margin: 15px 0;
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    -webkit-transition: 500ms;
-    -o-transition: 500ms;
-    transition: 500ms;
+    -webkit-transition: 500msms;
+    -o-transition: 500msms;
+    transition: 500msms;
     display:inline-block;
 }
 
@@ -166,9 +179,65 @@ body{
     z-index:1000;
 }
 
-.skillList li{
+/*skills*/
+
+#skills img{
+    width:180px;
+    border-radius: 100px;
+    border:1px solid black;
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+#skills{
+    text-align: center;
+}
+
+.sideinfo{
+    position:absolute;
+    top:-100px;
+    left:10%;
+    background: rgba(250,250,250,0.8);
+    border:1px solid black;
+    width:250px;
+    border-radius: 5px;
+    padding:10px;
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+   /*display:none;*/
+
+}
+.sideinfoR{
+    /*left:-190%;*/
+}
+.skill{
+    position:relative;
+
+    margin-left:50px;
+    margin-top:50px;
+    display:inline-block;
+    z-index:1;
+}
+
+.skill img:hover, .skill img:hover + *{
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity:1;
+}
+
+
+/*Languages*/
+
+.langList li{
     list-style-type: none;
 
+}
+.langLvl{
+    color:gold;
 }
 
 table{
@@ -181,19 +250,81 @@ td{
     border:solid 2px black;
     padding:4px;
 }
-
-
+.scrollfade{
+    -webkit-transition: 500ms;
+        -o-transition: 500ms;
+        transition: 500ms;    
+}
 
 .pictures, .overlay, .overlayR{
 
     width:100%;
-    min-width: 1100px;
+    /*min-width: 1100px;*/
     height:40vw;
     min-height: 450px;
     background-repeat: no-repeat ;
 }
 
+/*Projects*/
 
+/* Move picture left and up shrink, add info below*/
+
+
+#projects{
+    text-align: center;
+}
+#projects ul{
+    text-align: right;
+    list-style: none;
+}
+#projects a{
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 50px;
+    color:#202020;
+
+}
+li{    
+    -webkit-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
+}
+
+#projects li:hover{
+    transform:scale(1.4);
+}
+.projects{
+    width:40%;
+    margin:20px;
+    float:left;
+}
+.viewer{
+    width:50%;
+    height:40%;
+    float: right;
+    position:relative;
+        /*border-radius: 400px;*/
+    /*border:2px solid #202020;*/
+
+}
+.img-over{
+
+    width:360px;
+    height:360px;
+    border-radius: 200px;
+    border:2px solid #202020;
+    margin-top:55px;
+    position:absolute;
+    right:0px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+.transparent{
+    opacity:0;
+
+}
 
 /*text formatting*/
 
@@ -226,11 +357,10 @@ h2{
     -webkit-text-stroke:1px #909090;
     text-align: center;
     margin-top:15%;
+    z-index:-5;
+
 }
 
-.pictures h2{
-    text-align:center;
-}
 
 #divider1{
 /* City Skyline Color*/
@@ -246,15 +376,18 @@ h2{
 #divider2{
 /*Mountain*/
     background-image: url("../imgs/mountainsbg.jpg");
+
 }
 #divider2overlay{
     background-image: url("../imgs/mountainsoverlay.png");
     position:absolute;
 
+
 }
 #divider2overlay2{
     background-image: url("../imgs/mountainsoverlay2.png");
     position:absolute;
+
 }
 
 
@@ -265,7 +398,8 @@ h2{
 
 }
 #divider3overlay{
-        background-image: url("../imgs/waveoverlayflip.png");
+    background-image: url("../imgs/waveoverlayflip.png");
+    position:absolute;
 
 }
 #divider4{
@@ -287,8 +421,22 @@ h2{
     position:absolute; 
 }
 
+#divider6{
+/*blossoms*/
+    background-image: url("../imgs/boozebg.png");
+    background-repeat: repeat;
+}
+#divider6overlay{
+    background-image: url("../imgs/boozeoverlay.png");
+    position:absolute; 
+}
+#divider6overlay2{
+    background-image: url("../imgs/booze2000.png");
+    position:absolute; 
+}
+
 .content{
-    height:40vw;
+    height:500px;
     width:100%;
     margin:0;
     position:relative;
@@ -301,7 +449,7 @@ h2{
 }
 #language{
 }
-#work{
+#projects{
 }
 #about{
 }
@@ -311,13 +459,10 @@ h2{
 
     h1 {
 
-    font-size: 10vh !important;
+    font-size: 12vh !important;
 }
 
 
-section{
-    /*max-height:400px;*/
-}
 
     #divider1{
 /* City Skyline Color*/
@@ -392,8 +537,12 @@ h1 {
 
 .pictures{
     height:300px;
+    width:100%;
+    overflow: hidden;
 
 }
+
+
 
 
 
