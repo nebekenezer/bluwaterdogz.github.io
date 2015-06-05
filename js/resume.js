@@ -90,7 +90,9 @@ $('.scrollfade').each(function(){
 					){
 
 					console.log("hit");
-					$obj.removeClass("scrollfade transparent");
+					$obj.removeClass("transparent", function(){
+						$(this).removeClass("scrollfade");
+					});
 				}
 		});
 });
